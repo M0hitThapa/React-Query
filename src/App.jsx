@@ -2,8 +2,11 @@ import OldWay from "./components/OldWay"
 import PostsRQ from "./components/PostsRQ"
 import Home from "./components/Home"
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import PostDetails from "./components/PostDetails.jsx"
+import PaginatedQueries from "./components/PaginatedQueries.jsx"
 
 const App = () => {
+  
   return (
     <BrowserRouter>
     <div className="bg-black h-screen">
@@ -25,6 +28,8 @@ const App = () => {
        <Route exact path="/" element={<Home />} />
        <Route exact path="/posts" element={<OldWay />} />
        <Route exact path="/rq-posts" element={<PostsRQ />} />
+       <Route exact path="/rq-posts/:postId" element={<PostDetails />} />
+       <Route exact path="/paginated-fruits" element={<PaginatedQueries />} />
       </Routes>
       </div>
     </BrowserRouter>
